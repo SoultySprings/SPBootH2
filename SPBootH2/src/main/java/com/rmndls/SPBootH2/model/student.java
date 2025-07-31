@@ -10,6 +10,8 @@ public class student {
     private String fullname;
     private String city;
 
+
+
     public int getRollno() {
         return rollno;
     }
@@ -37,10 +39,8 @@ public class student {
 
     @Override
     public String toString() {
-        return "student{" +
-                "rollno=" + rollno +
-                ", fullname='" + fullname + '\'' +
-                ", city='" + city + '\'' +
-                "}\n";
+        return "Roll No: " + rollno +
+                ", Full name: '" + fullname + '\'' +
+                ", City: '" + city + '\'';
     }
 }

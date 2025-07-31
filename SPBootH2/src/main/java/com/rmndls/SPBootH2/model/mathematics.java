@@ -27,9 +27,7 @@ public class mathematics {
 
     @Override
     public String toString() {
-        return "mathematics{" +
-                "mno=" + mno +
-                ", marks=" + marks +
-                "}\n";
+        return "Roll No: " + mno +
+                ", Marks: " + marks;
     }
 }

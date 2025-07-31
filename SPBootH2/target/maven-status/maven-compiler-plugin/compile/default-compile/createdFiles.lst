@@ -5,6 +5,7 @@ com\rmndls\SPBootH2\model\chemistry.class
 com\rmndls\SPBootH2\model\student.class
 com\rmndls\SPBootH2\repo\studentRepo$1.class
 com\rmndls\SPBootH2\service\overallService.class
+com\rmndls\SPBootH2\DBtoTxt.class
 com\rmndls\SPBootH2\model\physics.class
 com\rmndls\SPBootH2\repo\physicsRepo.class
 com\rmndls\SPBootH2\model\mathematics.class

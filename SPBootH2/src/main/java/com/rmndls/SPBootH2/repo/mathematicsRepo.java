@@ -27,7 +27,6 @@ public class mathematicsRepo {
     public void save(mathematics m){
         String sql="insert into mathematics (mno, marks) values (?,?)";
         int rows = jdbc.update(sql, m.getMno(), m.getMarks());
-        System.out.println(rows + " affected. Mathematics marks added for each.");
     }
 
     public List<mathematics> findAll() {

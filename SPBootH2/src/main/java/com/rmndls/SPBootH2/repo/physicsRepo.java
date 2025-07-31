@@ -27,7 +27,6 @@ public class physicsRepo {
     public void save(physics p){
         String sql="insert into physics (pno, marks) values (?,?)";
         int rows = jdbc.update(sql, p.getPno(), p.getMarks());
-        System.out.println(rows + " affected. Physics marks added for each.");
     }
 
     public List<physics> findAll() {

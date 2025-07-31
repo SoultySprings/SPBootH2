@@ -27,9 +27,7 @@ public class physics {
 
     @Override
     public String toString() {
-        return "physics{" +
-                "pno=" + pno +
-                ", marks=" + marks +
-                "}\n";
+        return "Roll No: " + pno +
+                ", Marks: " + marks;
     }
 }

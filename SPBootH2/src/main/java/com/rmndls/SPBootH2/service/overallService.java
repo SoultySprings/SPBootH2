@@ -18,15 +18,15 @@ public class overallService {
         studentRepo.save(s);
     }
 
-    public void mathsMarks(mathematics m){
+    public void addMathsMarks(mathematics m){
         mathematicsRepo.save(m);
     }
 
-    public void chemMarks(chemistry c){
+    public void addChemMarks(chemistry c){
         chemistryRepo.save(c);
     }
 
-    public void physMarks(physics p){ physicsRepo.save(p); }
+    public void addPhysMarks(physics p){ physicsRepo.save(p); }
 
     public List<student> getStudents() {
 

@@ -10,9 +10,12 @@
 	</parent>
 	<groupId>com.rmndls</groupId>
 	<artifactId>SPBootH2</artifactId>
-	<version>v2</version>
+	<version>v3</version>
 	<name>SPBootH2</name>
-	<description>Integration of H2Db for a student database using SpringBoot. Uses a lightweight db (H2) which reduces the footprint and required no need for any software, the data is stored internally helping it to reduce the extra memory for a .jar file. Also includes 3 subjects for 3 various tables(seperate dbs), attached to the student db using a FOREIGN KEY, their dbut can be added as needed</description>
+	<description>
+		Integration of H2Db for a student database using SpringBoot. Uses a lightweight db (H2) which reduces the footprint and required no need for any software, the data is stored internally helping it to reduce the extra memory for a .jar file. Also includes 3 subjects for 3 various tables(seperate dbs), attached to the student db using a FOREIGN KEY, their dbut can be added as needed
+		v3: Changes include saving data in db by writing to data.sql using Java FileWriter, thereby saving data.
+	</description>
 	<url/>
 	<licenses>
 		<license/>

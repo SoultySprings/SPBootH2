@@ -27,7 +27,6 @@ public class chemistryRepo {
     public void save(chemistry c){
         String sql="insert into chemistry (cno, marks) values (?,?)";
         int rows = jdbc.update(sql, c.getCno(), c.getMarks());
-        System.out.println(rows + " affected. Chemistry marks added for each.");
     }
 
     public List<chemistry> findAll() {

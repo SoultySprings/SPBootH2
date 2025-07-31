@@ -27,9 +27,7 @@ public class chemistry {
 
     @Override
     public String toString() {
-        return "chemistry{" +
-                "cno=" + cno +
-                ", marks=" + marks +
-                "}\n";
+        return "Roll No: " + cno +
+                ", Marks: " + marks;
     }
 }
