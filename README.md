@@ -1,6 +1,6 @@
 # SPBootH2
 
-# 🧑‍🎓 Student Database with H2 Integration using Spring Boot
+## 🧑‍🎓 Student Database with H2 Integration using Spring Boot
 
 This project demonstrates a lightweight Student Management System using **Spring Boot** and **H2 Database**.
 
