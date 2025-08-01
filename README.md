@@ -1,30 +1,54 @@
-# 🧑‍🎓 SPBootH2  
-**Student Management System with H2 Database Integration using Spring Boot**
+# 🎓 MarkMate
+<pre lang="text"><code> 
+    __  ___           __   __  ___      __     
+   /  |/  /___ ______/ /__/  |/  /___ _/ /____ 
+  / /|_/ / __ `/ ___/ //_/ /|_/ / __ `/ __/ _ \
+ / /  / / /_/ / /  / ,< / /  / / /_/ / /_/  __/
+/_/  /_/\__,_/_/  /_/|_/_/  /_/\__,_/\__/\___/ 
+</code></pre>
 
-A lightweight Spring Boot application that demonstrates how to manage student and subject records using an embedded, in-memory H2 database. Ideal for rapid prototyping or scenarios where external DB dependencies are undesirable.
+A lightweight **Spring Boot** application that enables dynamic management of students and their academic records using an embedded, in-memory **H2 database**. Tailored for rapid development with minimal system dependencies, this version introduces subject flexibility and persistent schema tracking.
+
+---
+
+## 💡 Introduction
+
 
 ---
 
 ## 🔍 Overview
-- Integrates **H2 Database** in-memory mode for seamless runtime operations.
-- **No need for external DB software**—the database runs internally, reducing system footprint and simplifying deployment (especially useful when building `.jar` files).
-- Focuses on efficient schema management and data retrieval using **Spring JDBC Template**.
-- Mimics a real-world academic record system by separating concerns via normalized relational tables.
+
+- Uses an **embedded H2 database** for runtime operations with no external DB software required.
+- Ideal for `.jar` deployments and lightweight environments where memory and dependencies must be minimized.
+- Designed to **simulate a real-world academic system**, supporting dynamic schema creation.
+- User-driven architecture: both student data and subject tables are defined at runtime.
 
 ---
 
 ## 🗃️ Features
-- **Student Table**: Stores `roll number`, `full name`, and `city`.
-- **Subject Tables**: Includes `mathematics`, `physics`, and `chemistry`—each linked to the student table using a **foreign key (roll number)**.
-- **Auto Schema Setup**: Tables are auto-generated using `schema.sql` and populated using `data.sql`.
-- **Data Persistence**:  
-  - Runtime data is saved back to `data.sql` using **Java FileWriter**, enabling simulated persistence across application restarts.
-  - Real-time changes are also logged to a separate `changes.txt` file for auditability.
-- **Modular Design**: Subject tables are independent and can be extended or modified with minimal changes.
+
+- **Student Table**  
+  - Stores basic student information: `roll number`, `full name`, and `city`.
+  - Auto-generated at runtime using `schema.sql`.
+
+- **Dynamic Subject Tables**  
+  - Users can create any number of **custom subject tables** during execution.
+  - Each subject table contains `subjectID` (foreign key to `student.rollno`) and `marks`.
+  - The structure of each new subject table is written to a **dedicated `subjectlist.sql`** file, ensuring persistence of schema definitions.
+
+- **Data Persistence**  
+  - Student and marks data are saved back to `data.sql` using **Java FileWriter**.
+  - Created subject schemas are written to `subjectlist.sql` to ensure they are loaded on subsequent runs.
+  - All database changes are also logged to `changes.txt` for traceability.
+
+- **Lightweight Console UI**  
+  - Intuitive menu-driven switch-case interface for all operations.
+  - Timestamps displayed for tracking session context.
 
 ---
 
 ## 🧪 Tech Stack
+
 - Java 17+
 - Spring Boot 3
 - H2 Database (In-Memory)
@@ -34,6 +58,46 @@ A lightweight Spring Boot application that demonstrates how to manage student an
 ---
 
 ## 🧠 Future Enhancements
-- Implement full **CRUD operations** for subject marks.
-- Expose functionality via **REST APIs** with DTO mapping and exception handling.
-- Enable persistent storage using **file-based H2 mode** for true long-term data retention.
+
+- ✅ Implement full **CRUD operations** for all dynamically added subjects.
+- ✅ Support **custom subject deletion** with table removal.
+- 🔄 Enable persistent storage using **file-based H2 mode** (instead of purely in-memory).
+- 🌐 Expose all functionality via **REST APIs** with DTO mapping, validation, and exception handling.
+- 📊 Add report generation and statistics for student performance.
+
+---
+
+## 🗂️ Version History
+
+- **v1.0** – Basic student table with fixed subject tables (`math`, `physics`, `chemistry`)
+- **v2.0** – Integration with H2 DB, schema.sql/data.sql structure
+- **v3.0** – Java FileWriter-based persistence
+- **v4.0** – 🔥 Major overhaul:  
+  - Subject tables are now **user-defined**, dynamically created at runtime  
+  - Changes saved to `changes.txt`
+  - New tables added to `subjectlist.sql` to keep track and contradict extra creta  
+  - No hardcoded subject logic — truly flexible structure  
+  - Added ASCII banner branding and log support
+
+---
+
+## 🧾 Sample Files Generated
+
+- `schema.sql` — creates core student table.
+- `data.sql` — stores runtime-added students and marks.
+- `subjectlist.sql` — stores schema for each user-added subject table.
+- `changes.txt` — logs of data and schema updates.
+
+---
+
+## 🔒 License
+
+This project is released under the [MIT License](https://opensource.org/licenses/MIT).
+
+---
+
+## 👤 Author
+
+**SoultySprings**
+
+---
